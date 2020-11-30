@@ -6,7 +6,7 @@ import App from './components/App';
 //para poder trabajar con el middleware 
 import {createStore,applyMiddleware} from 'redux';
 import { Provider } from 'react-redux';
-//importamos el middleware para las llamadas asincronas
+//1)importamos el middleware para las llamadas asincronas
 import reduxThunk from 'redux-thunk';
 //importamos los reducer ya creados
 import reducers from './reducers';
@@ -17,7 +17,7 @@ const store = createStore(
   /*todos los reducers*/
   reducers,
   {},//estado inicial 
-  /*se le aplica al almacenamiento como un middleware*/ 
+  /*2)se le aplica al almacenamiento como un middleware*/ 
   applyMiddleware(reduxThunk)
 );
 ReactDOM.render(

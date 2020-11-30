@@ -1,0 +1,5 @@
+[1125/123051.833:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1125/234837.099:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acesso Negado} Um processo solicitou acesso a um objeto, mas o direito de acesso não lhe foi concedido. (0xc0000022)
+[1125/234837.109:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acesso Negado} Um processo solicitou acesso a um objeto, mas o direito de acesso não lhe foi concedido. (0xc0000022)
+[1125/234837.129:ERROR:exception_snapshot_win.cc(99)] thread ID 9292 not found in process
+[1125/234837.129:ERROR:exception_snapshot_win.cc(99)] thread ID 6168 not found in process

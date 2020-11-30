@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './css/index.css';
 import App from './components/App';
 //para crear store importamos:
 //para poder trabajar con el middleware 

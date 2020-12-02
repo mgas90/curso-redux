@@ -2,10 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import * as usuariosActions from '../../actions/usuariosActions';
+import * as publicacionesActions from '../../actions/publicacionesActions';
+
 class Publicaciones extends Component{
 
   componentDidMount(){
-    if(!this.props.usuarios.length){
+    //tenemos que especificar ahora a que reducer nos estamos refiriendo 
+    if(!this.props.usuariosReducer.usuarios.length){
       this.props.traerTodos();
     }
   }
@@ -22,8 +25,17 @@ class Publicaciones extends Component{
   }
 }
 
-const mapStateToProps = (reducers) => {
-  return reducers.usuariosReducer
+const mapStateToProps = ({usuariosReducer, publicacionesReducer }) => {
+  return {
+    usuariosReducer, 
+    publicacionesReducer
+  };
 };
+//me va a entregar todo lo de usuariosActions y publicacionesActions
+
+const mapDispatchToProps ={
+  ...usuariosActions,
+  ...publicacionesActions
+}
 
 export default connect(mapStateToProps, usuariosActions)(Publicaciones);

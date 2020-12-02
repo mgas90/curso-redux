@@ -8,9 +8,9 @@ class Publicaciones extends Component{
 
   componentDidMount(){
     //tenemos que especificar ahora a que reducer nos estamos refiriendo 
-    if(!this.props.usuariosReducer.usuarios.length){
-      this.props.traerTodos();
-    }
+    if (!this.props.usuariosReducer.usuarios.length) {
+			this.props.traerTodos();
+		}
   }
   render(){
     console.log(this.props)
@@ -33,9 +33,9 @@ const mapStateToProps = ({usuariosReducer, publicacionesReducer }) => {
 };
 //me va a entregar todo lo de usuariosActions y publicacionesActions
 
-const mapDispatchToProps ={
-  ...usuariosActions,
-  ...publicacionesActions
-}
+const mapDispatchToProps = {
+	...usuariosActions,
+	...publicacionesActions
+};
 
-export default connect(mapStateToProps, usuariosActions)(Publicaciones);
+export default connect(mapStateToProps, mapDispatchToProps)(Publicaciones);
